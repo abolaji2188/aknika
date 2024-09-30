@@ -1,0 +1,177 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+} 
+@keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 50%;
+      background: linear-gradient(to right, #008000, magenta, gold);
+    }
+    100% {
+      background-position: 100% 50%;
+      background: linear-gradient(to right, magenta, gold, #008000);
+    }
+  }
+.typewriter {
+    font-size: 30px;
+    color: goldenrod;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 0 0 4px gold; 
+    position: relative;
+    /* left: 30%; */
+}
+  
+  #line1, #line2 {
+    overflow: hidden; /* Hide the text initially */
+    white-space: nowrap; /* Keep the text on a single line */
+    border-right: 4px solid #000; /* Add a caret effect */
+    animation: typewriter 4s steps(40, end) forwards; /* Animate the text */
+  }
+  
+  @keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#neon-button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(77, 68, 2);
+    background: linear-gradient(to top right,rgb(219, 165, 29), rgb(249, 209, 108), rgb(219, 165, 29));
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px gold, 0 0 30px gold;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: url(c68d22a5bc4da5140d7d20ec64a5f970.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: gold;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Oleo Script", sans-serif;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.click{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    animation: click 2s infinite;
+    animation-delay: 5s;
+}
+.wish{
+    font-size: 14px;
+    color: rgb(255, 224, 144);
+    border: 1px rgb(255, 224, 144);
+    font-family: "Oleo Script", sans-serif;
+    position: absolute;
+    top: 35%;
+}
+@keyframes click {
+    0%{
+        position: absolute;
+        top: 70%;
+        left: 35%;
+    }
+    100%{
+        position: absolute;
+        top: 75%;
+        left: 35%;
+    }
+}
+
+@media (max-width: 1020px) {
+    body{
+        background: url(524e584893a83eb83574844219e47d84.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -3;
+    }
+    #typewriter{
+        font-size: 30px;
+        position: absolute;
+        top: 40%;
+        color: goldenrod;
+        text-shadow: 0 0 10px gold;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+}
